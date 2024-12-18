@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame Crafters</title>
+    <link rel="stylesheet" href="s1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        .card-header {
+            font-family: 'Times New Roman', Times, serif;
+            color: #f5f5f5;
+        }
+         #button:hover{
+            background-color: #3A99D9; 
+             box-shadow: 0 0 10px #3A99D9;
+        }
+        .card-header button:hover {
+            border: none;
+        }
+        .card-header button {
+            border: none;
+        }
+
+        .nav-tabs .nav-link.active {
+            background-color: dodgerblue;
+            color: black;
+            border: none;
+        }
+
+        .nav-tabs .nav-link {
+            color: #f5f5f5;
+            border: none;
+        }
+        .nav-tabs {
+    border-bottom: 1px solid transparent;
+}
+
+
+
+        .card-body {
+            background-color: darkslategray;
+            color: lightgray;
+        }
+
+        .card-footer {
+            background-color: #333;
+            color: #f5f5f5;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        \\ Cam \\
+        .card {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+            border: 1px solid #343a40;
+        }
+
+        .card-header {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #343a40;
+            color: #fff;
+        }
+
+        .dropdown-menu {
+            background-color: #343a40;
+        }
+
+        .dropdown-item:hover {
+            background-color: #495057;
+        }
+
+        .nav-pills .nav-link {
+            color: #e0e0e0;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #e0e0e0;
+        }
+
+        .scrollspy-section {
+            padding-top: 70px;
+        }
+
+        .content-section {
+            position: relative;
+            height: 70vh;
+            overflow-y: auto;
+        }
+
+        .content-section::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .content-section::-webkit-scrollbar-thumb {
+            background-color: #495057;
+            border-radius: 5px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="card shadow-lg rounded">
+        <!-- Card Header -->
+        <div class="card-header bg-dark text-center">
+            <h1 class="text-uppercase">Frame Crafters</h1>
+            <ul class="nav nav-tabs nav-pills nav-justified mt-3">
+              <li>
+                <button class="nav-link rounded-pill" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active rounded-pill animated-tab" data-bs-toggle="tab" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link rounded-pill animated-tab" data-bs-toggle="tab" href="#direction">Direction</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link rounded-pill animated-tab" data-bs-toggle="tab" href="#cam">Cinematography</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link rounded-pill animated-tab" data-bs-toggle="tab" href="#edit">Editing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link rounded-pill animated-tab" data-bs-toggle="tab" href="#music">Music Production</a>
+              </li>
+              <li>
+                <a class="btn rounded-pill animated-button" id="button" type="button" style="border: 1px solid darkslateblue; color: antiquewhite;" href="./home.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+
+        <!-- Card Body -->
+        <div class="card-body bg-dark text-light p-4 rounded">
+
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header bg-dark text-light">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel"><i class="fas fa-video"></i> Frame Crafters</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bg-dark text-light">
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="nav-link" data-bs-toggle="tab" data-bs-dismiss="offcanvas">Home</a></li>
+                        <li><a href="#about" class="nav-link" data-bs-toggle="tab" data-bs-dismiss="offcanvas">About Us</a></li>
+                        <li><a href="#projects" class="nav-link" data-bs-toggle="tab" data-bs-dismiss="offcanvas">Projects</a></li>
+                        <li><a href="#workshops" class="nav-link" data-bs-toggle="tab" data-bs-dismiss="offcanvas">Workshops & Events</a></li>
+                        <li><a href="#gallery" class="nav-link" data-bs-toggle="tab" data-bs-dismiss="offcanvas">Gallery</a></li>
+                        <hr>
+                       
+                        <li><a href="#favorites" class="nav-link" data-bs-toggle="tab" data-bs-dismiss="offcanvas">Favorites/Watchlist</a></li>
+                        <hr>
+                        <li><a href="#submit-script" class="nav-link" data-bs-toggle="tab" data-bs-dismiss="offcanvas">Submit Your Script</a></li>
+                        <li><a href="#donate" class="nav-link" data-bs-toggle="tab" data-bs-dismiss="offcanvas">Donate/Support Us</a></li>
+                        <hr>
+                        <li class="nav-link">
+                            <a href="https://www.facebook.com/" class="btn btn-primary me-2"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/?lang=en" class="btn btn-primary me-2"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/accounts/login/?hl=en" class="btn btn-primary me-2"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/" class="btn btn-primary"><i class="fab fa-youtube"></i></a>
+                        </li>
+                        <hr>
+                        <li><a href="#search" class="nav-link" data-bs-toggle="tab" data-bs-dismiss="offcanvas"><i class="fas fa-search"></i> Search</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Carousel -->
+            <div id="slide" class="carousel slide mb-4" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#slide" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#slide" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#slide" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#slide" data-bs-slide-to="3"></button>
+                </div>
+
+                <!-- Slideshow/carousel -->
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                        <img src="./direction.jpg" alt="Direction" class="d-block rounded w-100" style="height: 500px;">
+                        <div class="carousel-caption">
+                            <h3 class="text-light">DIRECTION</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./cinematographers.jpg" alt="Cinematography" class="d-block rounded w-100" style="height: 500px;">
+                        <div class="carousel-caption">
+                            <h3 class="text-light">CINEMATOGRAPHY</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./editing.jpg" alt="Editing" class="d-block rounded w-100" style="height: 500px;">
+                        <div class="carousel-caption">
+                            <h3 class="text-light">EDITING</h3>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./music.jpg" alt="Music Production" class="d-block rounded w-100" style="height: 500px;">
+                        <div class="carousel-caption">
+                            <h3 class="text-light">MUSIC PRODUCTION</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#slide" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#slide" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Home Tab -->
+                <div class="tab-pane container active" style="padding: 50px; border-radius: 10px;" id="home">
+                    <div class="container">
+                        <!-- Section 1: Introduction -->
+                        <div class="row mb-4">
+                            <div class="col-md-12 text-center">
+                                <h2 class="mb-3"><i class="fas fa-video"></i> Welcome to Future Filmers</h2>
+                                <p class="lead">Unleashing Creativity, One Frame at a Time</p>
+                            </div>
+                        </div>
+
+                        <!-- Section 2: Our Vision -->
+                        <div class="row mb-4">
+                            <div class="col-md-4 text-center">
+                                <i class="fas fa-bullseye fa-2x text-info mb-2"></i>
+                                <h4 class="mb-3">Our Vision</h4>
+                                <p>At Film Makers, we believe that every story deserves to be told with authenticity and
+                                    artistry...</p>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <i class="fas fa-film fa-2x text-warning mb-2"></i>
+                                <h4 class="mb-3">Our Services</h4>
+                                <p>We handle every aspect of film production, from concept to final cut, ensuring a
+                                    seamless journey...</p>
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <i class="fas fa-award fa-2x text-danger mb-2"></i>
+                                <h4 class="mb-3">Why Choose Us?</h4>
+                                <p>Our filmmakers have been recognized for their exceptional work, bringing a wealth of
+                                    experience...</p>
+                            </div>
+                            
+                        </div>
+ 
+                        <br><br>
+                        <div class="card-body  " style="border: 2px solid red;border-radius: 50px;">
+                        <div class="container">
+                            <div class="row justify-content-center mb-4">
+                              <div class="col-md-6 col-lg-5 text-center">
+                                <i class="fa-solid fa-clapperboard fa-2x text-warning mb-2 "></i>
+                                <h4 class="mb-3">Direction</h4>
+                                <p>We oversee every stage of film direction, guiding the creative vision from script to screen, ensuring that each scene unfolds seamlessly and delivers a compelling story....</p>
+                              </div>
+                              <div class="col-md-6 col-lg-5 text-center">
+                                <i class="fa-solid fa-video fa-2x text-danger mb-2"></i>
+                                <h4 class="mb-3">Cinematography</h4>
+                                <p>We master the art of cinematography, capturing breathtaking visuals from every angle, ensuring each frame tells a compelling story...</p>
+                              </div>
+                            </div>
+                            
+                            <div class="row justify-content-center mb-4">
+                              <div class="col-md-6 col-lg-5 text-center">
+                               <i class="fa-solid fa-wand-magic-sparkles fa-2x text-success mb-2"></i>
+                                <h4 class="mb-3">Editing</h4>
+                                <p>We meticulously craft each frame, blending visual and sound elements to shape a compelling narrative, ensuring a seamless and engaging viewing experience from raw footage to the final cut...</p>
+                              </div>
+                              <div class="col-md-6 col-lg-5 text-center">
+                               <i class="fa-solid fa-music fa-2x text-primary mb-2"></i>
+                                <h4 class="mb-3">Music Production</h4>
+                                <p>We handle every stage of music production, from initial composition to the final master, delivering a polished and professional sound that resonates with audiences...</p>
+                              </div>
+                            </div>
+                          </div>
+                          </div>
+
+
+
+
+                        <!-- Section 3: Call to Action -->
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <h5 class="mt-4"><i class="fas fa-play-circle"></i> Start Your Journey with Us</h5>
+                                <a href="#contact" class="btn btn-outline-info btn-lg mt-3">Contact Us <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Direction Tab -->
+                <div class="tab-pane container fade" id="direction">
+                    <div class="container mt-5">
+                        <!-- Content Section -->
+                        <div class="card bg-light mb-4">
+                            <div class="card-body text-center">
+                                <h2 class="card-title" style="color: black;"><b>Screen Direction</b></h2>
+                            </div>
+                        </div>
+                
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title" style="color: black;"><b>What is screen direction?</b></h3>
+                                <p class="card-text">Screen direction, also known as camera direction, is the direction that characters and objects move in the scene in relation to the frame. In describing screen direction, you might say that a character is moving camera left vs camera right. Screen left and camera left mean the same thing in the context of screen direction. Maintaining a cohesive sense of direction is important to the clarity of a scene and for preserving the continuity of motion.</p>
+                            </div>
+                        </div>
+                
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title" style="color: black;"><b>What is screen direction in film?</b></h3>
+                                <ul class="list-unstyled">
+                                    <li>- Movement of characters or objects within the frame</li>
+                                    <li>- NOT camera movement</li>
+                                    <li>- Followed by using the 180-degree rule</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h3 class="card-title" style="color: black;"><b>Why screen direction is important?</b></h3>
+                                <p class="card-text">Unless every character and object on screen remains motionless, screen direction will always be present. It isn’t a matter of having camera direction, it’s a matter of ensuring consistent continuity of motion.</p>
+                                <p class="card-text">There are simple, technical ways to use this technique and there are more creative uses as well. Let’s start with the technical.</p>
+                                <p class="card-text">The following video lesson covers the basics of screen direction:</p>
+                                
+                                <!-- Video Section -->
+                                <div class="d-flex justify-content-center">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rubfUfbB2-A?si=jOwZUY5xvkhROK4g" 
+                                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                                            encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- Camera Tab -->
+                <div class="tab-pane container fade" id="cam">
+                    <div data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="0" tabindex="0">
+
+                        <div class="container mt-5">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!-- Scrollspy Nav -->
+                                    <nav id="navbar-example" class="navbar  p-3 rounded-3 flex-column">
+                                        <a class="navbar-brand text-light" href="#">Sections</a>
+                                        <nav class="nav nav-pills flex-column">
+                                            <a class="nav-link" href="#introduction">Introduction</a>
+                                            <a class="nav-link" href="#tools">Essential Tools</a>
+                                            <a class="nav-link" href="#composition">Composition & Framing</a>
+                                            <a class="nav-link" href="#lighting">Lighting Techniques</a>
+                                            <a class="nav-link" href="#advanced">Advanced Techniques</a>
+                                        </nav>
+                                    </nav>
+                                </div>
+                    
+                                <div class="col-md-9">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h2 style="color: rgb(255, 254, 254);">Cinematography Guide</h2>
+                                        </div>
+                                        <div class="card-body content-section" id="content-section" data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="0">
+                                            <!-- Introduction Section -->
+                                            <section id="introduction" class="scrollspy-section">
+                                                <h4 style="color: black;">1. Introduction to Cinematography</h4>
+                                                <p>Cinematography is the process of capturing moving images on film or digitally. It's about crafting the visual look of the film, deciding how scenes are shot, and how the story is told visually. The Director of Photography (DP) or Cinematographer is in charge of this process.</p>
+                                                <p><b>Role of the Cinematographer:</b></p>
+                                                <ul>
+                                                    <li>Works closely with the director to translate the story's vision.</li>
+                                                    <li>Chooses the right cameras, lenses, lighting, and angles to create the desired mood and style.</li>
+                                                    <li>Balances the technical aspects of filmmaking with artistic intent.</li>
+                                                </ul>
+                                                <div class="d-flex justify-content-center">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ow7w7FUAkdk?si=gO6_210d9IoxQ8L_" allowfullscreen></iframe>
+                                                </div>
+                                            </section>
+                    
+                                            <!-- Essential Tools Section -->
+                                            <section id="tools" class="scrollspy-section">
+                                                <h4 style="color: black;">2. Essential Tools in Cinematography</h4>
+                                                <p><b>Camera:</b> Types include DSLR, mirrorless, cinema cameras, film cameras, etc. They vary by resolution and frame rates (4K, 24fps, etc).</p>
+                                                <p><b>Lenses:</b> Prime lenses (fixed focal length) vs. Zoom lenses (variable focal length). They affect the depth of field, focus, and composition.</p>
+                                                <p><b>Lighting Equipment:</b> Key light, fill light, and backlight (three-point lighting), along with softboxes, reflectors, and diffusers.</p>
+                                                <div class="d-flex justify-content-center">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/skzlVAFXTik?si=tLmG2v40rVqLb9ko" allowfullscreen></iframe>
+                                                </div>
+                                            </section>
+                    
+                                            <!-- Composition Section -->
+                                            <section id="composition" class="scrollspy-section">
+                                                <h4 style="color: black;">3. Basics of Composition and Framing</h4>
+                                                <p><b>Rule of Thirds:</b> Placing the subject off-center to create dynamic compositions.</p>
+                                                <p><b>Leading Lines:</b> Using lines to guide the viewer’s eyes toward the subject.</p>
+                                                <p><b>Symmetry:</b> Balanced or intentionally imbalanced shots for artistic effect.</p>
+                                                <div class="d-flex justify-content-center">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/hUmZldt0DTg?si=h3bki4XEmC60zYp4" allowfullscreen></iframe>
+                                                </div>
+                                            </section>
+                    
+                                            <!-- Lighting Section -->
+                                            <section id="lighting" class="scrollspy-section">
+                                                <h4 style="color: black;">4. Lighting Techniques in Cinematography</h4>
+                                                <p><b>Three-Point Lighting:</b> The key light is the main source, the fill light softens shadows, and the backlight creates separation between the subject and the background.</p>
+                                                <p><b>High-Key vs Low-Key Lighting:</b> Bright, minimal shadows vs. dark, heavy shadows (used in dramas and thrillers).</p>
+                                                <div class="d-flex justify-content-center">
+                                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/r2nD_knsNrc?si=xxVoV5tr9SwAaT2r" allowfullscreen></iframe>
+                                                </div>
+                                            </section>
+                    
+                                            <!-- Advanced Techniques Section -->
+                                            <section id="advanced" class="scrollspy-section">
+                                                <h4 style="color: black;">5. Advanced Cinematic Techniques</h4>
+                                                <p><b>Long Takes:</b> Continuous, uninterrupted shots requiring precise choreography.</p>
+                                                <p><b>Rack Focus:</b> Shifting focus from one subject to another within the same shot for dramatic effect.</p>
+                                                <p><b>Chiaroscuro Lighting:</b> High-contrast lighting with deep shadows, commonly used in film noir.</p>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                      </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="tab-pane container fade" id="edit">
+                    <div style="background-color: #121212; color: #f8f9fa;">
+                        <!-- Navbar -->
+                        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">Film Editing Guide</a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav ms-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" href="#introduction">Introduction</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#basics">Basics</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#intermediate">Intermediate</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#advanced">Advanced</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="#software">Software</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    
+                        <!-- Main Content -->
+                        <div class="container mt-5">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <!-- Sidebar -->
+                                    <nav class="nav flex-column bg-dark p-3 rounded" style="border: 1px solid #6c757d;">
+                                        <a class="nav-link text-light" href="#introduction">Introduction</a>
+                                        <a class="nav-link text-light" href="#basics">Basics of Film Editing</a>
+                                        <a class="nav-link text-light" href="#intermediate">Intermediate Techniques</a>
+                                        <a class="nav-link text-light" href="#advanced">Advanced Techniques</a>
+                                        <a class="nav-link text-light" href="#software">Editing Software</a>
+                                    </nav>
+                                </div>
+                    
+                                <div class="col-lg-9">
+                                    <!-- Introduction Section -->
+                                    <section id="introduction" class="mb-5">
+                                        <div class="card" style="background-color: #1c1c1c; border: none;color: antiquewhite;">
+                                            <div class="card-header bg-dark text-white">
+                                                <h2>Introduction</h2>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Film editing is the process of piecing together raw footage to craft a compelling story, manipulating time, emotion, and narrative structure. It’s where the magic of filmmaking happens, and understanding its nuances is key to becoming a skilled filmmaker.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+                    
+                                    <!-- Basics of Film Editing -->
+                                    <section id="basics" class="mb-5">
+                                        <div class="card" style="background-color: #1c1c1c; border: none;color: antiquewhite;">
+                                            <div class="card-header bg-dark text-white">
+                                                <h2>Basics of Film Editing</h2>
+                                            </div>
+                                            <div class="card-body">
+                                                <h4>What is Film Editing?</h4>
+                                                <p>Film editing is the art of selecting, arranging, and assembling shots to form a cohesive and meaningful sequence. It’s the bridge between shooting and the final film, shaping how the story is perceived.</p>
+                                                
+                                                <h4>Key Terms Every Beginner Should Know:</h4>
+                                                <ul class="list-group" style="background-color: #1c1c1c;color: antiquewhite;">
+                                                    <li class="list-group-item bg-dark text-light">Cut</li>
+                                                    <li class="list-group-item bg-dark text-light">Shot</li>
+                                                    <li class="list-group-item bg-dark text-light">Sequence</li>
+                                                    <li class="list-group-item bg-dark text-light">Scene</li>
+                                                    <li class="list-group-item bg-dark text-light">Montage</li>
+                                                </ul>
+                    
+                                                <h4>The Role of a Film Editor</h4>
+                                                <ul>
+                                                    <li>Storyteller</li>
+                                                    <li>Problem-Solver</li>
+                                                    <li>Collaborator</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </section>
+                    
+                                    <!-- Intermediate Techniques -->
+                                    <section id="intermediate" class="mb-5">
+                                        <div class="card" style="background-color: #1c1c1c; border: none;color: antiquewhite;">
+                                            <div class="card-header bg-dark text-white">
+                                                <h2>Intermediate Editing Techniques</h2>
+                                            </div>
+                                            <div class="card-body">
+                                                <h4>Types of Cuts and Transitions</h4>
+                                                <ul class="list-group" style="background-color: #1c1c1c;color: antiquewhite;">
+                                                    <li class="list-group-item bg-dark text-light">Straight Cut</li>
+                                                    <li class="list-group-item bg-dark text-light">Cutting on Action</li>
+                                                    <li class="list-group-item bg-dark text-light">J-Cut & L-Cut</li>
+                                                    <li class="list-group-item bg-dark text-light">Match Cut</li>
+                                                    <li class="list-group-item bg-dark text-light">Cross-Cutting</li>
+                                                    <li class="list-group-item bg-dark text-light">Fade In/Out</li>
+                                                </ul>
+                    
+                                                <h4>Creating Continuity</h4>
+                                                <p>Using techniques like <b>Eyeline Match</b> and <b>180-Degree Rule</b>, editors ensure visual consistency in scenes.</p>
+                    
+                                                <h4>Building Pace and Rhythm</h4>
+                                                <p>Faster cuts create intensity, while slower cuts allow for emotional depth.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+                    
+                                    <!-- Advanced Techniques -->
+                                    <section id="advanced" class="mb-5">
+                                        <div class="card" style="background-color: #1c1c1c; border: none;color: antiquewhite;">
+                                            <div class="card-header bg-dark text-white">
+                                                <h2>Advanced Film Editing Techniques</h2>
+                                            </div>
+                                            <div class="card-body">
+                                                <h4>Nonlinear Narrative Construction</h4>
+                                                <p>Flashbacks, flashforwards, and dream sequences offer creative ways to tell a complex story.</p>
+                    
+                                                <h4>Manipulating Time</h4>
+                                                <p>Jump cuts, slow motion, and time lapses add drama or urgency to scenes.</p>
+                    
+                                                <h4>Visual Effects in Editing</h4>
+                                                <p>Using techniques like green screen and compositing, editors blend real footage with CGI to create compelling visuals.</p>
+                                            </div>
+                                        </div>
+                                    </section>
+                    
+                                    <!-- Editing Software -->
+                                    <section id="software" class="mb-5">
+                                        <div class="card" style="background-color: #1c1c1c; border: none;color: antiquewhite;">
+                                            <div class="card-header bg-dark text-white">
+                                                <h2>Editing Software</h2>
+                                            </div>
+                                            <div class="card-body">
+                                                <h4>Popular Editing Software</h4>
+                                                <ul class="list-group" style="background-color: #1c1c1c;color: antiquewhite;">
+                                                    <li class="list-group-item bg-dark text-light">Adobe Premiere Pro</li>
+                                                    <li class="list-group-item bg-dark text-light">Final Cut Pro</li>
+                                                    <li class="list-group-item bg-dark text-light">DaVinci Resolve</li>
+                                                    <li class="list-group-item bg-dark text-light">Avid Media Composer</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    
+                      
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+                <div class="tab-pane container fade" id="music">
+                    <div style="background-color: #121212; color: #e0e0e0;">
+                        <div class="container mt-5">
+                            <h1 style="text-align: center; margin-bottom: 30px;">Music Production Guide for Filmmaking</h1>
+                    
+                            <!-- 1. Introduction to Music Production in Filmmaking -->
+                            <div class="card mb-3">
+                                <div class="card-header" style="background-color: #333; color: #fff;">
+                                    <h2>1. Introduction to Music Production in Filmmaking</h2>
+                                </div>
+                                <div class="card-body" style="background-color: #1f1f1f;">
+                                    <p>Music plays an essential role in enhancing storytelling, setting moods, and influencing the emotional experience in films. Here’s an overview of music’s role in filmmaking.</p>
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseRoleMusic">Role of Music in Film</button>
+                                    <div id="collapseRoleMusic" class="collapse">
+                                        <p>Music enhances storytelling, sets the tone, and evokes emotions that align with the narrative of the film.</p>
+                                    </div>
+                    
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseTypesMusic">Types of Music in Film</button>
+                                    <div id="collapseTypesMusic" class="collapse">
+                                        <ul>
+                                            <li><strong>Score</strong>: Original music created specifically for the film.</li>
+                                            <li><strong>Soundtrack</strong>: Pre-existing songs licensed for use in the film.</li>
+                                            <li><strong>Diegetic vs. Non-Diegetic Music</strong>: Music heard by the characters (diegetic) versus background music (non-diegetic).</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- 2. Basic Music Production Concepts -->
+                            <div class="card mb-3">
+                                <div class="card-header" style="background-color: #333; color: #fff;">
+                                    <h2>2. Basic Music Production Concepts</h2>
+                                </div>
+                                <div class="card-body" style="background-color: #1f1f1f;">
+                                    <p>Let’s explore some basic concepts that will help you create effective music for films.</p>
+                    
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseSoundBasics">Sound Basics</button>
+                                    <div id="collapseSoundBasics" class="collapse">
+                                        <ul>
+                                            <li>Sound Waves: Understanding frequency and amplitude.</li>
+                                            <li>Types of Sounds: Harmonics, overtones, melody, harmony, and rhythm.</li>
+                                        </ul>
+                                    </div>
+                    
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseMusicTheory">Music Theory</button>
+                                    <div id="collapseMusicTheory" class="collapse">
+                                        <ul>
+                                            <li>Scales and Chords: Major, minor, diminished, augmented chords.</li>
+                                            <li>Rhythm: Time signatures, tempo, and beat.</li>
+                                            <li>Modes and Key Signatures: Affecting mood and tonality.</li>
+                                        </ul>
+                                    </div>
+                    
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseInstruments">Musical Instruments</button>
+                                    <div id="collapseInstruments" class="collapse">
+                                        <p>Overview of common instruments used in film music: piano, strings, brass, woodwinds, and electronic instruments.</p>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- 3. Music Composition for Film -->
+                            <div class="card mb-3">
+                                <div class="card-header" style="background-color: #333; color: #fff;">
+                                    <h2>3. Music Composition for Film</h2>
+                                </div>
+                                <div class="card-body" style="background-color: #1f1f1f;">
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseComposition">Music Composition Concepts</button>
+                                    <div id="collapseComposition" class="collapse">
+                                        <ul>
+                                            <li>Understanding the Narrative: Composing music that supports the storyline.</li>
+                                            <li>Themes and Motifs: Creating recurring themes for characters or situations.</li>
+                                            <li>Spotting Sessions: Deciding with the director where music is needed in the film.</li>
+                                            <li>Music Dynamics and Timing: Syncing music with key moments in the film.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- 4. Introduction to Digital Audio Workstations (DAWs) -->
+                            <div class="card mb-3">
+                                <div class="card-header" style="background-color: #333; color: #fff;">
+                                    <h2>4. Introduction to Digital Audio Workstations (DAWs)</h2>
+                                </div>
+                                <div class="card-body" style="background-color: #1f1f1f;">
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseDAWs">What is a DAW?</button>
+                                    <div id="collapseDAWs" class="collapse">
+                                        <p>A DAW (Digital Audio Workstation) is software used for recording, editing, and producing audio files.</p>
+                                    </div>
+                    
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseDAWFunctions">Popular DAWs and Functions</button>
+                                    <div id="collapseDAWFunctions" class="collapse">
+                                        <ul>
+                                            <li>Popular DAWs: Pro Tools, Logic Pro, Cubase, FL Studio, Ableton Live.</li>
+                                            <li>Functions: Track Arrangement, MIDI Sequencing, Recording, Editing.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- 5. Sound Design and Effects -->
+                            <div class="card mb-3">
+                                <div class="card-header" style="background-color: #333; color: #fff;">
+                                    <h2>5. Sound Design and Effects</h2>
+                                </div>
+                                <div class="card-body" style="background-color: #1f1f1f;">
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseSoundDesign">Sound Design Overview</button>
+                                    <div id="collapseSoundDesign" class="collapse">
+                                        <p>Sound design involves creating soundscapes that combine ambient sounds, foley, and music to immerse the audience.</p>
+                                    </div>
+                    
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseEffects">Sound Effects</button>
+                                    <div id="collapseEffects" class="collapse">
+                                        <ul>
+                                            <li>Reverb: Simulating spaces and atmospheres.</li>
+                                            <li>Delay: Creating echoes.</li>
+                                            <li>EQ and Compression: Balancing and polishing sounds.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- 6. Intermediate Concepts -->
+                            <div class="card mb-3">
+                                <div class="card-header" style="background-color: #333; color: #fff;">
+                                    <h2>6. Intermediate Concepts</h2>
+                                </div>
+                                <div class="card-body" style="background-color: #1f1f1f;">
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseMixing">Mixing Concepts</button>
+                                    <div id="collapseMixing" class="collapse">
+                                        <ul>
+                                            <li>Balancing Levels: Ensuring every instrument is clearly heard.</li>
+                                            <li>Panning: Placing sounds in different stereo fields.</li>
+                                            <li>Reverb and Delay: Adding depth and space.</li>
+                                        </ul>
+                                    </div>
+                    
+                                    <button class="btn btn-dark mb-3" style="background-color: #444; border-color: #444;" data-bs-toggle="collapse" data-bs-target="#collapseAdvancedTheory">Advanced Music Theory for Film</button>
+                                    <div id="collapseAdvancedTheory" class="collapse">
+                                        <ul>
+                                            <li>Modulations: Changing keys for dramatic effect.</li>
+                                            <li>Counterpoint: Combining multiple melodies.</li>
+                                            <li>Polyrhythms: Using different rhythms simultaneously.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    
+                      
+                       
+                    
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+                      </div>
+                </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <!-- Card Footer -->
+        <div class="card-footer text-center bg-dark p-4">
+            <h5 class="text-light">Thank You for Visiting!</h5>
+            <p class="text-light">Follow us on social media for the latest updates.</p>
+            <a href="https://www.facebook.com/" class="btn btn-primary me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/?lang=en" class="btn btn-primary me-2"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/accounts/login/?hl=en" class="btn btn-primary me-2"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/" class="btn btn-primary"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+/* General Tab Animation */
+.animated-tab {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .animated-tab:hover {
+    transform: scale(1.1);
+    background-color: darkslateblue !important;
+    color: white !important;
+  }
+  
+  /* Animation for Active Tab */
+  .nav-link.active {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Button Animation */
+  .animated-button {
+    transition: all 0.4s ease;
+  }
+  
+  .animated-button:hover {
+    background-color: darkslateblue;
+    color: white !important;
+    transform: scale(1.05);
+  }
+  
+  /* Animation for Page Navigation (Login/Register) */
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+  
+  /* Add animation to button */
+  #button:active {
+    animation: slideOut 0.6s ease forwards;
+  }
+  
